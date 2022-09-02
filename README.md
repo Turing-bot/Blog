@@ -26,4 +26,4 @@ This theme uses the default code syntax highlighter of jekyll, [Rouge](http://ro
 
 ---
 
-Fork from [huxpro](https://huxpro.github.io)
+Open source from [huxpro](https://huxpro.github.io)
