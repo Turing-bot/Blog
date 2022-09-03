@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 'VS Code 默认配置项'
+subtitle: 'Vs Code default configuration item'
 author: 'turing-bot'
 header-style: text
 catalog: true
