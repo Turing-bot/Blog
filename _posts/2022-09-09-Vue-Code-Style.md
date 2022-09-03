@@ -212,12 +212,16 @@ export default {
 }
 ```
 
-<br /> 
+<br />
+
 #### 1.3.2 prop
+
 **在声明 prop 的时候，其命名应该始终使用 camelCase，而在模板和 JSX 中应该始终使用 kebab-case**。我们单纯的遵循每个语言的约定，在 JavaScript 中更自然的是 camelCase。而在 HTML 中则是 kebab-case。
+
 ```html
-<WelcomeMessage greeting-text="hi"/>
+<WelcomeMessage greeting-text="hi" />
 ```
+
 ```javascript
 export default {
   name: 'MyComponent',
@@ -227,7 +231,7 @@ export default {
       type: String,
       required: true,
       validator: function (value) {
-        return ['syncing', 'synced',].indexOf(value) !== -1
+        return ['syncing', 'synced'].indexOf(value) !== -1
       }
     }
   }
@@ -262,30 +266,37 @@ export default {
 },
 ```
 
-<br /> 
+<br />
+
 #### 1.3.4 模板中组件
+
 **对于绝大多数项目来说，在单文件组件和字符串模板中组件名应该总是 PascalCase 的，但是在 DOM 模板中总是 kebab-case 的。**
+
 ```html
-<!-- 在单文件组件和字符串模板中 --> 
-<MyComponent/>
+<!-- 在单文件组件和字符串模板中 -->
+<MyComponent />
 
 <!-- 在 DOM 模板中 -->
 
 <my-component></my-component>
+```
 
-````
 <br />
+
 #### 1.3.5 自闭合组件
+
 **在单文件组件、字符串模板和 JSX 中没有内容的组件应该是自闭合的——但在 DOM 模板里永远不要这样做。**
+
 ```html
 <!-- 在单文件组件和字符串模板中 -->
-<MyComponent/>
+<MyComponent />
 
 <!-- 在所有地方 -->
 <my-component></my-component>
-````
+```
 
-<br /> 
+<br />
+
 #### 1.3.6 变量
 
 - 命名方法：camelCase
@@ -300,7 +311,8 @@ let tableTitle = 'LoginTable'
 let mySchool = '我的学校'
 ```
 
-<br /> 
+<br />
+
 #### 1.3.7 常量
 
 - 命名方法：全部大写下划线分割
@@ -311,7 +323,8 @@ const MAX_COUNT = 10
 const URL = 'http://test.host.com'
 ```
 
-<br /> 
+<br />
+
 #### 1.3.8 方法
 
 - 命名方法：camelCase
@@ -378,7 +391,9 @@ this.$emit('my-event')
 ></div>
 ```
 
-<br /> <br />而为了区分*原生事件*和*自定义事件*在 Vue 中的使用，建议除了多单词事件名使用 kebab-case 的情况下，命名还需遵守为 **on + 动词** 的形式，如下：
+<br /> <br />
+
+而为了区分*原生事件*和*自定义事件*在 Vue 中的使用，建议除了多单词事件名使用 kebab-case 的情况下，命名还需遵守为 **on + 动词** 的形式，如下：
 
 ```html
 <!-- 父组件 -->
@@ -427,10 +442,14 @@ export default {
 </script>
 ```
 
-<br /> 
+<br />
+
 ## 二、代码规范
+
 ### 2.1 Vue
+
 #### 2.1.1 代码结构
+
 ```vue
 <template>
   <div id="my-component">
@@ -464,25 +483,31 @@ export default {
 #my-component {
 }
 </style>
+```
 
-````
 <br />
+
 #### 2.1.2 data
+
 **组件的 data 必须是一个函数。**
+
 ```javascript
 // In a .vue file
 export default {
-  data () {
+  data() {
     return {
       foo: 'bar'
     }
   }
 }
-````
+```
 
-<br /> 
+<br />
+
 #### 2.1.3 prop
+
 **Prop 定义应该尽量详细。**
+
 ```javascript
 export default {
   props: {
@@ -490,30 +515,32 @@ export default {
       type: String,
       required: true,
       validator: function (value) {
-        return [
-          'syncing', 
-          'synced',
-          'version-conflict',
-          'error'
-        ].indexOf(value) !== -1
+        return (
+          ['syncing', 'synced', 'version-conflict', 'error'].indexOf(value) !==
+          -1
+        )
       }
     }
   }
 }
 ```
-<br /> 
+
+<br />
+
 #### 2.1.4 computed
+
 **应该把复杂计算属性分割为尽可能多的更简单的属性。** 小的、专注的计算属性减少了信息使用时的假设性限制，所以需求变更时也用不着那么多重构了。
+
 ```javascript
 // bad
-computed: { 
-  price: function () { 
-    var basePrice = this.manufactureCost / (1 - this.profitMargin) 
-    return ( 
-      basePrice - 
-      basePrice * (this.discountPercent || 0) 
-    ) 
-  } 
+computed: {
+  price: function () {
+    var basePrice = this.manufactureCost / (1 - this.profitMargin)
+    return (
+      basePrice -
+      basePrice * (this.discountPercent || 0)
+    )
+  }
 }
 
 // good
@@ -529,35 +556,37 @@ return this.basePrice - this.discount
 }
 }
 
-````
+```
+
 <br />
+
 #### 2.1.5 为 v-for 设置键值
+
 **在组件上必须用 key 搭配 v-for**，以便维护内部组件及其子树的状态。甚至在元素上维护可预测的行为，比如动画中的**对象固化 (object constancy)**[2]。
+
 ```html
 <ul>
-  <li
-      v-for="todo in todos"
-      :key="todo.id">
-    {{ todo.text }}
-  </li>
+  <li v-for="todo in todos" :key="todo.id">{{ todo.text }}</li>
 </ul>
-````
+```
 
-<br /> 
+<br />
+
 #### 2.1.6 v-if 和 v-for 互斥
+
 **永远不要把 v-if 和 v-for 同时用在同一个元素上。**
+
 ```html
 <!-- bad：控制台报错 -->
 <ul>
-  <li
-    v-for="user in users"
-    v-if="shouldShowUsers"
-    :key="user.id">
-      {{ user.name }}
+  <li v-for="user in users" v-if="shouldShowUsers" :key="user.id">
+    {{ user.name }}
   </li>
 </ul>
 ```
-<br /> <br />一般我们在两种常见的情况下会倾向于这样做：
+
+<br /> <br />
+一般我们在两种常见的情况下会倾向于这样做：
 
 - 为了过滤一个列表中的项目 (比如 v-for="user in users" v-if="user.isActive")。在这种情形下，请将 users 替换为一个计算属性 (比如 activeUsers)，让其返回过滤后的列表。
 
@@ -593,13 +622,16 @@ computed: {
 </ul>
 ```
 
-<br /> 
+<br />
+
 #### 2.1.7 多个 attribute 的元素
+
 **多个 attribute 的元素应该分多行撰写，每个 attribute 一行。**
+
 ```html
 <!-- bad -->
-<img src="https://vuejs.org/images/logo.png" alt="Vue Logo">
-<MyComponent foo="a" bar="b" baz="c"/>
+<img src="https://vuejs.org/images/logo.png" alt="Vue Logo" />
+<MyComponent foo="a" bar="b" baz="c" />
 ```
 
 ```html
@@ -609,22 +641,34 @@ computed: {
 <MyComponent foo="a" bar="b" baz="c" />
 ```
 
-<br /> 
+<br />
+
 #### 2.1.8 模板中简单的表达式
+
 **组件模板应该只包含简单的表达式，复杂的表达式则应该重构为计算属性或方法。**<br />复杂表达式会让你的模板变得不那么声明式。我们应该尽量描述应该出现的**是什么**，而非**如何**计算那个值。而且计算属性和方法使得代码可以重用。
+
 ```javascript
 // bad
-{{
-  fullName.split(' ').map((word) => {
-    return word[0].toUpperCase() + word.slice(1)
-  }).join(' ')
-}}
+{
+  {
+    fullName
+      .split(' ')
+      .map(word => {
+        return word[0].toUpperCase() + word.slice(1)
+      })
+      .join(' ')
+  }
+}
 ```
-<br /> <br />更好的做法：
+
+<br /> <br />
+更好的做法：
+
 ```html
 <!-- 在模板中 -->
 {{ normalizedFullName }}
 ```
+
 ```javascript
 // 复杂表达式已经移入一个计算属性
 computed: {
@@ -652,7 +696,8 @@ computed: {
 <AppSidebar :style="{ width: sidebarWidth + 'px' }"></AppSidebar>
 ```
 
-<br /> 
+<br />
+
 #### 2.1.10 指令缩写
 
 - **用 : 表示 v-bind:**
@@ -673,34 +718,42 @@ computed: {
 </template>
 ```
 
-<br /> 
+<br />
+
 ### 2.2 HTML
+
 #### 2.2.1 文件模板
+
 HTML5 文件模板：
-```html
-<!DOCTYPE html>
-  <html lang="zh-CN">
-  <head>
-    <meta charset="UTF-8">
-    <title>HTML5标准模版</title>
-  </head>
-  <body>
-  </body>
-</html>
-```
-<br /> <br />移动端：
+
 ```html
 <!DOCTYPE html>
 <html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
-    <meta name="format-detection" content="telephone=no">
+  <head>
+    <meta charset="UTF-8" />
+    <title>HTML5标准模版</title>
+  </head>
+  <body></body>
+</html>
+```
+
+<br /> <br />
+移动端：
+
+```html
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no"
+    />
+    <meta name="format-detection" content="telephone=no" />
     <title>移动端HTML模版</title>
 
     <!-- S DNS预解析 -->
-    <link rel="dns-prefetch" href="">
+    <link rel="dns-prefetch" href="" />
     <!-- E DNS预解析 -->
 
     <!-- S 线上样式页面片，开发请直接取消注释引用 -->
@@ -708,34 +761,35 @@ HTML5 文件模板：
     <!-- E 线上样式页面片 -->
 
     <!-- S 本地调试，根据开发模式选择调试方式，请开发删除 -->
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/index.css" />
     <!-- /本地调试方式 -->
 
-    <link rel="stylesheet" href="http://srcPath/index.css">
+    <link rel="stylesheet" href="http://srcPath/index.css" />
     <!-- /开发机调试方式 -->
     <!-- E 本地调试 -->
-
-</head>
-<body>
-</body>
+  </head>
+  <body></body>
 </html>
 ```
-<br /> <br />PC 端：
+
+<br /> <br />
+PC 端：
+
 ```html
 <!DOCTYPE html>
 <html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta name="keywords" content="your keywords">
-    <meta name="description" content="your description">
-    <meta name="author" content="author,email address">
-    <meta name="robots" content="index,follow">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-    <meta name="renderer" content="ie-stand">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="keywords" content="your keywords" />
+    <meta name="description" content="your description" />
+    <meta name="author" content="author,email address" />
+    <meta name="robots" content="index,follow" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+    <meta name="renderer" content="ie-stand" />
     <title>PC端HTML模版</title>
 
     <!-- S DNS预解析 -->
-    <link rel="dns-prefetch" href="">
+    <link rel="dns-prefetch" href="" />
     <!-- E DNS预解析 -->
 
     <!-- S 线上样式页面片，开发请直接取消注释引用 -->
@@ -743,21 +797,22 @@ HTML5 文件模板：
     <!-- E 线上样式页面片 -->
 
     <!-- S 本地调试，根据开发模式选择调试方式，请开发删除 -->
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/index.css" />
     <!-- /本地调试方式 -->
 
-    <link rel="stylesheet" href="http://srcPath/index.css">
+    <link rel="stylesheet" href="http://srcPath/index.css" />
     <!-- /开发机调试方式 -->
     <!-- E 本地调试 -->
-
-</head>
-<body>
-</body>
+  </head>
+  <body></body>
 </html>
 ```
-<br /> 
+
+<br />
+
 #### 2.2.2 元素及标签闭合
-HTML 元素共有以下5种：
+
+HTML 元素共有以下 5 种：
 
 - 空元素：area、base、br、col、command、embed、hr、img、input、keygen、link、meta、param、source、track、wbr
 - 原始文本元素：script、style
@@ -788,27 +843,34 @@ HTML 元素共有以下5种：
 <br />
 ```
 
-<br /> 
+<br />
+
 #### 2.2.3 代码嵌套
+
 元素嵌套规范，每个块状元素独立一行，内联元素可选。
+
 ```html
 <!-- good -->
 <div>
-    <h1></h1>
-    <p></p>
-</div>	
+  <h1></h1>
+  <p></p>
+</div>
 <p><span></span><span></span></p>
 
 <!-- bad -->
 <div>
-    <h1></h1><p></p>
-</div>	
-<p> 
-    <span></span>
-    <span></span>
+  <h1></h1>
+  <p></p>
+</div>
+<p>
+  <span></span>
+  <span></span>
 </p>
 ```
-<br /> <br />段落元素与标题元素只能嵌套内联元素。
+
+<br /> <br />
+段落元素与标题元素只能嵌套内联元素。
+
 ```html
 <!-- good -->
 <h1><span></span></h1>
@@ -818,9 +880,13 @@ HTML 元素共有以下5种：
 <h1><div></div></h1>
 <p><div></div><div></div></p>
 ```
-<br /> 
+
+<br />
+
 ### 2.3 CSS
+
 #### 2.3.1 样式文件
+
 样式文件必须写上 @charset 规则，并且一定要在样式文件的第一行首个字符位置开始写，编码名用 “UTF-8”。
 
 - 推荐：
@@ -851,8 +917,10 @@ HTML 元素共有以下5种：
 }
 ```
 
-<br /> 
+<br />
+
 #### 2.3.2 代码格式化
+
 样式书写一般有两种：一种是紧凑格式 （Compact），一种是展开格式（Expanded）。
 
 - 推荐：展开格式（Expanded）
@@ -875,8 +943,10 @@ HTML 元素共有以下5种：
 }
 ```
 
-<br /> 
+<br />
+ 
 #### 2.3.3 代码大小写
+
 样式选择器，属性名，属性值关键字全部使用小写字母书写，属性字符串允许使用大小写。
 
 - 推荐：
@@ -897,7 +967,8 @@ HTML 元素共有以下5种：
 }
 ```
 
-<br /> 
+<br />
+
 #### 2.3.4 代码易读性
 
 1. 左括号与类名之间一个空格，冒号与属性值之间一个空格。
@@ -1041,8 +1112,10 @@ HTML 元素共有以下5种：
 }
 ```
 
-<br /> 
+<br />
+
 #### 2.3.5 属性值引号
+
 CSS 属性值需要用到引号时，统一使用单引号。
 
 - 推荐：
@@ -1063,8 +1136,10 @@ CSS 属性值需要用到引号时，统一使用单引号。
 }
 ```
 
-<br /> 
+<br />
+
 #### 2.3.6 属性书写建议
+
 建议遵循以下顺序：
 
 1. 布局定位属性：display / position / float / clear / visibility / overflow
@@ -1092,9 +1167,12 @@ CSS 属性值需要用到引号时，统一使用单引号。
 }
 ```
 
-<br /> 
+<br />
+
 #### 3.3.7 CSS3 浏览器私有前缀
+
 CSS3 浏览器私有前缀在前，标准前缀在后。
+
 ```css
 .jdc {
   -webkit-border-radius: 10px;
@@ -1104,9 +1182,13 @@ CSS3 浏览器私有前缀在前，标准前缀在后。
   border-radius: 10px;
 }
 ```
-<br /> 
+
+<br />
+
 ### 2.4 JavaScript
+
 #### 2.4.1 单行代码块
+
 在单行代码块中使用空格。
 
 - 不推荐：
@@ -1133,8 +1215,10 @@ if (foo) {
 }
 ```
 
-<br /> 
+<br />
+
 #### 2.4.2 大括号风格
+
 在编程过程中，大括号风格与缩进风格紧密联系，用来描述大括号相对代码块位置的方法有很多。在 JavaScript 中，主要有三种风格，如下：
 
 - **【推荐】One True Brace Style**
@@ -1171,7 +1255,8 @@ if (foo) {
 }
 ```
 
-<br /> 
+<br />
+
 #### 2.4.3 代码中的空格
 
 1. 逗号前后的空格可以提高代码的可读性，团队约定在逗号后面使用空格，逗号前面不加空格。
@@ -1302,8 +1387,10 @@ var sum = 1 + 2
 var sum = 1 + 2
 ```
 
-<br /> 
+<br />
+
 ## 三、注释规范
+
 **注释的目的：**
 
 - **提高代码的可读性，从而提高代码的可维护性**
@@ -1317,7 +1404,11 @@ var sum = 1 + 2
 
 #### 3.1.1 单行注释
 
-**一般用于简单的描述，如某些状态描述、属性描述等。**<br />注释内容前后各一个空格字符，注释位于要注释代码的上面，单独占一行。
+**一般用于简单的描述，如某些状态描述、属性描述等。**
+
+<br />
+
+注释内容前后各一个空格字符，注释位于要注释代码的上面，单独占一行。
 
 - 推荐：
 
@@ -1340,9 +1431,15 @@ var sum = 1 + 2
 </div>
 ```
 
-<br /> 
+<br />
+
 #### 3.1.2 模块注释
-**一般用于描述模块的名称以及模块开始与结束的位置。**<br />注释内容前后各一个空格字符， <!-- S Comment Text \-->表示模块开始， <!-- E Comment Text \-->表示模块结束，模块与模块之间相隔一行。
+
+**一般用于描述模块的名称以及模块开始与结束的位置。**
+
+<br />
+
+注释内容前后各一个空格字符， <!-- S Comment Text \-->表示模块开始， <!-- E Comment Text \-->表示模块结束，模块与模块之间相隔一行。
 
 - 推荐：
 
@@ -1369,38 +1466,47 @@ var sum = 1 + 2
 <!-- E Comment Text B -->
 ```
 
-<br /> 
+<br />
+
 #### 3.1.3 嵌套模块注释
+
 当模块注释内再出现模块注释的时候，为了突出主要模块，嵌套模块不再使用。
+
 ```html
 <!-- S Comment Text -->
 <!-- E Comment Text -->
 ```
-<br /> <br />而改用
+
+<br /> <br />
+
+而改用
+
 ```html
 <!-- /Comment Text -->
 ```
-<br /> <br />注释写在模块结尾标签底部，单独一行。
+
+<br /> <br />
+
+注释写在模块结尾标签底部，单独一行。
+
 ```html
 <!-- S Comment Text A -->
 <div class="mod_a">
-  
-    <div class="mod_b">
-        ...
-    </div>
-    <!-- /mod_b -->
-     
-    <div class="mod_c">
-     ...
-    </div>
-    <!-- /mod_c -->
-  
+  <div class="mod_b">...</div>
+  <!-- /mod_b -->
+
+  <div class="mod_c">...</div>
+  <!-- /mod_c -->
 </div>
 <!-- E Comment Text A -->
 ```
-<br /> 
+
+<br />
+
 ### 3.2 CSS 文件注释
+
 #### 3.2.1 单行注释
+
 注释内容第一个字符和最后一个字符都是一个空格字符，单独占一行，行与行之间相隔一行。
 
 - 推荐：
@@ -1430,9 +1536,11 @@ var sum = 1 + 2
 }
 ```
 
-<br /> 
+<br />
+
 #### 3.2.2 模块注释
-注释内容第一个字符和最后一个字符都是一个空格字符，/* 与 模块信息描述占一行，多个横线分隔符 - 与 */ 占一行，行与行之间相隔两行。
+
+注释内容第一个字符和最后一个字符都是一个空格字符，/_ 与 模块信息描述占一行，多个横线分隔符 - 与 _/ 占一行，行与行之间相隔两行。
 
 - 推荐：
 
@@ -1461,9 +1569,12 @@ var sum = 1 + 2
 }
 ```
 
-<br /> 
+<br />
+
 #### 3.2.3 文件注释
+
 在样式文件编码声明 @charset 语句下面注明页面名称、作者、创建日期等信息。
+
 ```css
 @charset "UTF-8";
 /**
@@ -1472,9 +1583,13 @@ var sum = 1 + 2
  * @date 2015-10-10
  */
 ```
-<br /> 
+
+<br />
+
 ### 3.3 JavaScript 文件注释
+
 #### 3.3.1 单行注释
+
 单行注释使用 //，注释应单独一行写在被注释对象的上方，不要追加在某条语句的后面。
 
 - 推荐：
@@ -1492,7 +1607,9 @@ const active = true
 const active = true // is current tab
 ```
 
-<br /> <br />注释行的上方需要有一个空行（**除非注释行上方是一个块的顶部**），以增加可读性。
+<br /> <br />
+
+注释行的上方需要有一个空行（**除非注释行上方是一个块的顶部**），以增加可读性。
 
 - 推荐：
 
@@ -1528,9 +1645,11 @@ function getType() {
 }
 ```
 
-<br /> 
+<br />
+
 #### 3.3.2 多行注释
-多行注释使用 /** ... */，而不是多行的 //。
+
+多行注释使用 /\*_ ... _/，而不是多行的 //。
 
 - 推荐：
 
@@ -1560,8 +1679,10 @@ function make(tag) {
 }
 ```
 
-<br /> 
+<br />
+
 #### 3.3.3 注释空格
+
 注释内容和注释符之间需要有一个空格，以增加可读性。eslint: spaced-comment。
 
 - 推荐：
@@ -1600,8 +1721,10 @@ function make(tag) {
 }
 ```
 
-<br /> 
+<br />
+
 #### 3.3.4 特殊标记
+
 有时我们发现某个可能的 bug，但因为一些原因还没法修复；或者某个地方还有一些待完成的功能，这时我们需要使用相应的特殊标记注释来告知未来的自己或合作者。常用的特殊标记有两种：
 
 - // FIXME : 说明问题是什么
@@ -1621,9 +1744,12 @@ class Calculator extends Abacus {
 }
 ```
 
-<br /> 
+<br />
+
 #### 3.3.5 文档类注释
+
 文档类注释，如函数、类、文件、事件等；都使用 jsdoc 规范。
+
 ```javascript
 /**
  * Book类，代表一个书本.
@@ -1655,8 +1781,11 @@ Book.prototype = {
   }
 
 ```
+
 <br />
+
 #### 3.3.6 注释工具
+
 ESLint 是当下最流行的 JS 代码检查工具，ESLint 中有一些注释相关的规则，用户可选择开启：
 
 - valid-jsdoc
@@ -1668,9 +1797,9 @@ ESLint 是当下最流行的 JS 代码检查工具，ESLint 中有一些注释�
 - multiline-comment-style
 - no-inline-comments
 - spaced-comment
+
 ## 四、其它
 
 - 缩进换行请使用两个空格。
 - 大型团队多人协作项目推荐 JavaScript 代码末尾加分号。
 - 小型个人创新练手项目可尝试使用 JavaScript 代码末尾不加分号的风格，更加清爽简练
-```
