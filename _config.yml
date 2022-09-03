@@ -1,9 +1,9 @@
 # Site settings
-title: 人间指南
-SEOTitle: 人间指南
+title: turing blog
+SEOTitle: turing blog
 header-img: img/github-atom-circle.svg
 email: 6199599@gmail.com
-description: '指哪哪难'
+description: 'hello, world'
 keyword: ' JavaScript, Vue, React '
 url: 'https://turing-bot.github.io/' # your host, for absolute URL
 baseurl: '' # for example, '/blog' if your blog hosted on 'host/blog'
