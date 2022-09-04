@@ -17,13 +17,13 @@ const PRECACHE_LIST = [
   "./offline.html",
   "./js/jquery.min.js",
   "./js/bootstrap.min.js",
-  "./js/hux-blog.min.js",
+  "./js/turing-blog.min.js",
   "./js/snackbar.js",
   "./img/icon_wechat.png",
   "./img/avatar-hux.jpg",
   "./img/home-bg.jpg",
   "./img/404-bg.jpg",
-  "./css/hux-blog.min.css",
+  "./css/turing-blog.min.css",
   "./css/bootstrap.min.css"
   // "//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css",
   // "//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/fonts/fontawesome-webfont.woff2?v=4.6.3",
@@ -130,10 +130,10 @@ self.addEventListener('activate', event => {
 
 var fetchHelper = {
 
-  fetchThenCache: function(request){
+  fetchThenCache: function (request) {
     // Requests with mode "no-cors" can result in Opaque Response,
     // Requests to Allow-Control-Cross-Origin: * can't include credentials.
-    const init = { mode: "cors", credentials: "omit" } 
+    const init = { mode: "cors", credentials: "omit" }
 
     const fetched = fetch(request, init)
     const fetchedCopy = fetched.then(resp => resp.clone());
@@ -142,15 +142,15 @@ var fetchHelper = {
     //       so Opaque Resp will not be cached in this case.
     Promise.all([fetchedCopy, caches.open(CACHE)])
       .then(([response, cache]) => response.ok && cache.put(request, response))
-      .catch(_ => {/* eat any errors */})
-    
+      .catch(_ => {/* eat any errors */ })
+
     return fetched;
   },
 
-  cacheFirst: function(url){
-    return caches.match(url) 
+  cacheFirst: function (url) {
+    return caches.match(url)
       .then(resp => resp || this.fetchThenCache(url))
-      .catch(_ => {/* eat any errors */})
+      .catch(_ => {/* eat any errors */ })
   }
 }
 
@@ -177,7 +177,7 @@ self.addEventListener('fetch', event => {
     }
 
     // Cache-only Startgies for ys.static resources
-    if (event.request.url.indexOf('ys.static') > -1){
+    if (event.request.url.indexOf('ys.static') > -1) {
       event.respondWith(fetchHelper.cacheFirst(event.request.url))
       return;
     }
@@ -188,7 +188,7 @@ self.addEventListener('fetch', event => {
     const cached = caches.match(event.request);
     const fetched = fetch(getCacheBustingUrl(event.request), { cache: "no-store" });
     const fetchedCopy = fetched.then(resp => resp.clone());
-    
+
     // Call respondWith() with whatever we get first.
     // Promise.race() resolves with first one settled (even rejected)
     // If the fetch fails (e.g disconnected), wait for the cache.
@@ -221,7 +221,7 @@ self.addEventListener('fetch', event => {
 /**
  * Broadcasting all clients with MessageChannel API
  */
-function sendMessageToAllClients(msg) {
+function sendMessageToAllClients (msg) {
   self.clients.matchAll().then(clients => {
     clients.forEach(client => {
       console.log(client);
@@ -233,7 +233,7 @@ function sendMessageToAllClients(msg) {
 /**
  * Broadcasting all clients async
  */
-function sendMessageToClientsAsync(msg) {
+function sendMessageToClientsAsync (msg) {
   // waiting for new client alive with "async" setTimeout hacking
   // https://twitter.com/Huxpro/status/799265578443751424
   // https://jakearchibald.com/2016/service-worker-meeting-notes/#fetch-event-clients
@@ -250,7 +250,7 @@ function sendMessageToClientsAsync(msg) {
  * @param  {Promise<response>} fetchedResp [description]
  * @return {Promise}
  */
-function revalidateContent(cachedResp, fetchedResp) {
+function revalidateContent (cachedResp, fetchedResp) {
   // revalidate when both promise resolved
   return Promise.all([cachedResp, fetchedResp])
     .then(([cached, fetched]) => {
