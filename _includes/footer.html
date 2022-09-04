@@ -6,7 +6,7 @@
                 <p class="copyright text-muted">
                     Copyright &copy; {{ site.title }} {{ site.time | date: '%Y' }}
                     <br>
-                    Powered by <a href="https://turing-bot.github.io/">turing-bot</a>    
+                    Powered by <a href="https://jekyllrb.com/">Jekyll</a>    
                 </p>
             </div>
         </div>
@@ -65,7 +65,7 @@
 {% endif %}
 
 
-{% if page.title == '档案' %}
+{% if page.title == '归档' %}
 <!-- jquery.tagcloud.js -->
 <script>
     async('{{ "/js/jquery.tagcloud.js" | prepend: site.baseurl }}', function () {

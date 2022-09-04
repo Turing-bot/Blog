@@ -15,7 +15,7 @@ future: true
 RSS: false
 github_username: turing-bot
 telegram_username: github1s
-bilibili_username: Evan-You
+bilibili_username: 48680878
 
 # Build settings
 # from 2016, 'pygments' is unsupported on GitHub Pages. Use 'rouge' for highlighting instead.
@@ -49,9 +49,6 @@ kramdown:
 
 # giscus settings
 giscus_username: turing-bot
-
-# Netease settings
-netease_comment: false
 
 # Sidebar settings
 sidebar: true # whether or not using Sidebar.
