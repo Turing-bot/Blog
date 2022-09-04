@@ -3,6 +3,7 @@ layout: post
 title: 'Vue 代码风格'
 subtitle: 'Vue code style'
 author: 'turing-bot'
+header-img: 'img/post-bg-css.jpg'
 header-style: text
 catalog: true
 tags:
