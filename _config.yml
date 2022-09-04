@@ -50,6 +50,10 @@ kramdown:
 # giscus settings
 giscus_username: turing-bot
 
+# Google Analytics
+# ga_track_id: 'UA-40339958-80' # Format: UA-xxxxxx-xx
+# ga_domain: turing-bot.github.io
+
 # Sidebar settings
 sidebar: true # whether or not using Sidebar.
 sidebar-about-description: '攻城不怕坚，<br>攻书莫畏难。<br>科学有险阻，<br>苦战能过关'
