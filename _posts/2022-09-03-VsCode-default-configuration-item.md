@@ -3,6 +3,7 @@ layout: post
 title: 'VS Code 默认配置项'
 subtitle: 'Vs Code default configuration item'
 author: 'turing-bot'
+date: 2022-09-04 00:00:00
 header-style: text
 catalog: true
 tags:
