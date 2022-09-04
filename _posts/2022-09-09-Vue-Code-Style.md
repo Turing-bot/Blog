@@ -3,8 +3,8 @@ layout: post
 title: 'Vue 代码风格'
 subtitle: 'Vue code style'
 author: 'turing-bot'
+date: 2022-09-04 00:00:00
 header-img: 'img/post-bg-css.jpg'
-header-style: text
 catalog: true
 tags:
   - Vue
