@@ -10,6 +10,20 @@ tags:
   - Vue
 ---
 
+<math>
+  <mroot>
+    <mi>a</mi>
+
+    <mi>n</mi>
+
+  </mroot>
+</math>
+<apply>
+  <root /><degree><ci type="integer">n</ci> </degree><ci>a</ci></apply
+>
+
+$$ \theta_i = \theta_i - \alpha\frac\partial{\partial\theta_i}J(\theta) $$
+
 ## 一、命名规范
 
 市面上常用的命名规范：
