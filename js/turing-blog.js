@@ -4,14 +4,14 @@
  * Licensed under Apache 2.0 (https://github.com/IronSummitMedia/startbootstrap/blob/gh-pages/LICENSE)
  */
 
- /*!
- * Hux Blog v1.6.0 (http://startbootstrap.com)
- * Copyright 2016 @huxpro
- * Licensed under Apache 2.0 
- */
+/*!
+* turing Blog v1.6.0 (http://startbootstrap.com)
+* Copyright 2016 @turing-bot
+* Licensed under Apache 2.0 
+*/
 
 // Tooltip Init
-// Unuse by Hux since V1.6: Titles now display by default so there is no need for tooltip
+// Unuse by turing-bot since V1.6: Titles now display by default so there is no need for tooltip
 // $(function() {
 //     $("[data-toggle='tooltip']").tooltip();
 // });
@@ -19,7 +19,7 @@
 
 // make all images responsive
 /* 
- * Unuse by Hux
+ * Unuse by turing-bot
  * actually only Portfolio-Pages can't use it and only post-img need it.
  * so I modify the _layout/post and CSS to make post-img responsive!
  */
@@ -28,13 +28,13 @@
 // });
 
 // responsive tables
-$(document).ready(function() {
+$(document).ready(function () {
     $("table").wrap("<div class='table-responsive'></div>");
     $("table").addClass("table");
 });
 
 // responsive embed videos
-$(document).ready(function() {
+$(document).ready(function () {
     $('iframe[src*="youtube.com"]').wrap('<div class="embed-responsive embed-responsive-16by9"></div>');
     $('iframe[src*="youtube.com"]').addClass('embed-responsive-item');
     $('iframe[src*="vimeo.com"]').wrap('<div class="embed-responsive embed-responsive-16by9"></div>');
@@ -42,17 +42,17 @@ $(document).ready(function() {
 });
 
 // Navigation Scripts to Show Header on Scroll-Up
-jQuery(document).ready(function($) {
+jQuery(document).ready(function ($) {
     var MQL = 1170;
 
     //primary navigation slide-in effect
     if ($(window).width() > MQL) {
         var headerHeight = $('.navbar-custom').height(),
-            bannerHeight  = $('.intro-header .container').height();     
+            bannerHeight = $('.intro-header .container').height();
         $(window).on('scroll', {
-                previousTop: 0
-            },
-            function() {
+            previousTop: 0
+        },
+            function () {
                 var currentTop = $(window).scrollTop(),
                     $catalog = $('.side-catalog');
 
