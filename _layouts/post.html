@@ -101,8 +101,30 @@ layout: default
 </article>
 
 <!-- add support for mathjax by voleking-->
-{% if page.mathjax %} {% include mathjax_support.html %} {% endif %} {% if
-site.anchorjs %}
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    TeX: {
+      equationNumbers: {
+        autoNumber: "AMS"
+      }
+    },
+    SVG: {
+      scale: 90
+    },
+    tex2jax: {
+      inlineMath: [ ['$','$'] ],
+      displayMath: [ ['$$','$$'] ],
+      processEscapes: true,
+    }
+  });
+</script>
+<script
+  id="MathJax-script"
+  async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+></script>
+
+{% if site.anchorjs %}
 <!-- async load function -->
 <script>
   function async(u, c) {
