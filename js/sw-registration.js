@@ -23,7 +23,7 @@ function handleRegistration (registration) {
       } else {
         console.log('A Visit without previous SW');
         createSnackbar({
-          message: 'App ready for offline use.',
+          message: '博客准备好离线使用。',
           duration: 3000
         })
       }
@@ -48,7 +48,7 @@ if (navigator.serviceWorker) {
     if (data.command == "UPDATE_FOUND") {
       console.log("UPDATE_FOUND_BY_SW", data);
       createSnackbar({
-        message: "页面内容已更新",
+        message: "页面内容有更新。",
         actionText: "刷新页面",
         action: function (e) { location.reload() }
       })
