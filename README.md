@@ -1,4 +1,4 @@
-### 个人博客，起名为 `turing-blog`。
+### 博客，起名为 `turing-blog`。
 
 ---
 
