@@ -23,7 +23,7 @@ function handleRegistration (registration) {
       } else {
         console.log('A Visit without previous SW');
         createSnackbar({
-          message: '博客准备好离线使用。',
+          message: '博客已准备好离线使用。',
           duration: 3000
         })
       }
