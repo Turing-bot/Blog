@@ -2,4 +2,4 @@
 
 ---
 
-Open source from [huxpro](https://huxpro.github.io)
+Open source from [huxpro](https://github.com/Huxpro/huxpro.github.io)
