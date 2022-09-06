@@ -17,10 +17,7 @@ layout: default
       <div
         class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 post-container"
       >
-        <!-- Multi-Lingual -->
-        {% if page.multilingual %} {% include multilingual-sel.html %} {% endif
-        %} {{ content }}
-
+        {{ content }}
         <hr style="visibility: hidden" />
         <ul class="pager">
           {% if page.previous.url %}
@@ -79,7 +76,7 @@ layout: default
         <div class="side-catalog">
           <hr class="hidden-sm hidden-xs" />
           <h5>
-            <a class="catalog-toggle" href="#">CATALOG</a>
+            <a class="catalog-toggle" href="#">目录</a>
           </h5>
           <ul class="catalog-body"></ul>
         </div>
