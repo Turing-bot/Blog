@@ -15,7 +15,7 @@ future: true
 RSS: false
 github_username: turing-bot
 telegram_username: github1s
-bilibili_username: 48680878
+discord_username: pN77vXfrWH
 
 # Build settings
 # from 2016, 'pygments' is unsupported on GitHub Pages. Use 'rouge' for highlighting instead.
