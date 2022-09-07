@@ -1,7 +1,7 @@
 ---
 layout: post
-title: 'Vue 代码风格'
-subtitle: 'Vue code style'
+title: 'Vue code style'
+subtitle: 'Vue 代码风格'
 author: 'turing-bot'
 date: 2022-09-04 00:00:00
 header-style: text
