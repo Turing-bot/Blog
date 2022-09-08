@@ -1,37 +1,19 @@
-{% comment %}
-    @param {Boolean} center 
-{% endcomment %}
-
-{% if include.center %}
+{% comment %} @param {Boolean} center {% endcomment %} {% if include.center %}
 <ul class="list-inline text-center">
-{% else %}
-<ul class="list-inline">
-{% endif %}
-
-  {% if site.RSS %}
-  <li>
-    <a href="{{ "/feed.xml" | prepend: site.baseurl }}">
-      <span class="fa-stack fa-lg">
-        <i class="fa fa-circle fa-stack-2x"></i>
-        <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
-      </span>
-    </a>
-  </li>
-  {% endif %}
-  
-  {% if site.github_username %}
-  <li>
-    <a target="_blank" href="https://github.com/{{ site.github_username }}">
-      <i class="fa-brands fa-github fa-2xl"></i>
-    </a>
-  </li>
-  {% endif %}
-
-  {% if site.telegram_username %}
-  <li>
-    <a target="_blank" href="https://t.me/{{ site.telegram_username }}">
-      <i class="fa-brands fa-telegram fa-2xl"></i>
-    </a>
-  </li>
-  {% endif %}
+  {% else %}
+  <ul class="list-inline">
+    {% endif %} {% if site.github_username %}
+    <li>
+      <a target="_blank" href="https://github.com/{{ site.github_username }}">
+        <i class="fa-brands fa-github fa-2xl"></i>
+      </a>
+    </li>
+    {% endif %} {% if site.telegram_username %}
+    <li>
+      <a target="_blank" href="https://t.me/{{ site.telegram_username }}">
+        <i class="fa-brands fa-telegram fa-2xl"></i>
+      </a>
+    </li>
+    {% endif %}
+  </ul>
 </ul>
