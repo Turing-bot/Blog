@@ -3,7 +3,7 @@ title: turing blog
 SEOTitle: 张文庆的博客 | turing blog
 header-img: img/post-bg-unix-linux.jpg
 email: 6199599@gmail.com
-description: 'hello, world'
+description: '张文庆的博客'
 keyword: ' turing-bot, turing, turing blog, JavaScript, TypeScript, HTML5, CSS3, Vue, React, VS Code '
 url: 'https://turing-bot.github.io/' # your host, for absolute URL
 baseurl: '' # for example, '/blog' if your blog hosted on 'host/blog'
