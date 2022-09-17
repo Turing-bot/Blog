@@ -2,7 +2,7 @@
 layout: post
 title: 'Add CloudMusic to Your Jekyll Blog'
 subtitle: '给Jekyll博客添加网易云音乐'
-header-img: 'img/post-bg-JekyllCloudmusic.jpg'
+header-img: 'img/in-post/2022-09-07-NeteaseMusic/post-bg-JekyllCloudmusic.jpg'
 catalog: true
 tags:
   - Jekyll
