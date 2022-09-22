@@ -1,7 +1,7 @@
 # Site settings
 title: turing blog
 SEOTitle: 张文庆的博客 | turing blog
-header-img: img/post-bg-unix-linux.jpg
+header-img: img/head-bg/home.jpg
 email: 6199599@gmail.com
 description: '这里是张文庆的个人博客 | turing blog'
 keyword: ' turing-bot, turing, turing blog, JavaScript, TypeScript, HTML5, CSS3, Vue, React, VS Code '
