@@ -4,8 +4,8 @@ SEOTitle: 张文庆的博客 | turing blog
 header-img: img/head-bg/home.jpg
 email: 6199599@gmail.com
 description: '这里是张文庆的个人博客 | turing blog'
-keyword: ' turing-bot, turing, turing blog, JavaScript, TypeScript, HTML5, CSS3, Vue, React, VS Code '
-url: 'https://turing-bot.github.io/' # your host, for absolute URL
+keyword: ''
+url: 'https://z0p.github.io/' # your host, for absolute URL
 baseurl: '' # for example, '/blog' if your blog hosted on 'host/blog'
 
 # Publish posts or collection documents with a future date.
@@ -13,7 +13,7 @@ future: true
 
 # SNS settings
 RSS: false
-github_username: turing-bot
+github_username: z0p
 telegram_username: github1s
 
 # Build settings
@@ -47,12 +47,12 @@ kramdown:
       start_line: 1
 
 # giscus settings
-giscus_username: turing-bot
+giscus_username: z0p
 
 # Sidebar settings
 sidebar: true # whether or not using Sidebar.
 sidebar-about-description: '有意义的活着。'
-sidebar-avatar: https://github.com/turing-bot.png # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-avatar: https://github.com/z0p.png # use absolute URL, seeing it's used in both `/` and `/about/`
 
 # Featured Tags
 featured-tags: true # whether or not using Feature-Tags
