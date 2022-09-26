@@ -2,7 +2,7 @@
 layout: post
 title: 'Vue code style'
 subtitle: 'Vue 代码风格'
-author: 'turing-bot'
+author: 'z0p'
 header-style: text
 catalog: true
 tags:
