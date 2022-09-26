@@ -5,7 +5,7 @@
  */
 
 /*!
-* turing Blog v1.6.0 (http://startbootstrap.com)
+* Blog v1.6.0 (http://startbootstrap.com)
 * Copyright 2016 @z0p
 * Licensed under Apache 2.0 
 */

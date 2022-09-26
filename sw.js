@@ -17,12 +17,12 @@ const PRECACHE_LIST = [
   "./offline.html",
   "./js/jquery.min.js",
   "./js/bootstrap.min.js",
-  "./js/turing-blog.min.js",
+  "./js/blog.min.js",
   "./js/snackbar.js",
   "./img/icon_wechat.png",
   "./img/home-bg.jpg",
   "./img/404-bg.jpg",
-  "./css/turing-blog.min.css",
+  "./css/blog.min.css",
   "./css/bootstrap.min.css"
 ]
 const HOSTNAME_WHITELIST = [

@@ -42,14 +42,14 @@
   margin-bottom: 20px;
 }
 .sidebar-container .short-about p {
-  margin-top: 0;
+  margin-top: 0px;
   margin-bottom: 20px;
 }
 .sidebar-container .short-about .list-inline > li {
-  padding-left: 0;
+  padding-left: 0px;
 }
 .catalog-container {
-  padding: 0;
+  padding: 0px;
 }
 .side-catalog {
   display: block;
@@ -79,7 +79,7 @@
   list-style: none;
   height: auto;
   overflow: hidden;
-  padding-left: 0;
+  padding-left: 0px;
   padding-right: 5px;
   text-indent: 0;
 }
@@ -103,12 +103,12 @@
 .side-catalog .catalog-body .h2_nav {
   margin-left: 0;
   font-size: 13px;
-  font-weight: 700;
+  font-weight: bold;
 }
 .side-catalog .catalog-body .h3_nav {
   margin-left: 6px;
   font-size: 13px;
-  font-weight: 700;
+  font-weight: bold;
 }
 .side-catalog .catalog-body .h4_nav {
   margin-left: 12px;
@@ -136,11 +136,15 @@
     display: none;
   }
 }
+/*
+  Please note this CSS is currently in   prototype form. We'll implement a cleaned up version in Web Starter Kit.
+*/
 .paper-snackbar {
   transition-property: opacity, bottom, left, right, width, margin,
     border-radius;
   transition-duration: 0.5s;
   transition-timing-function: ease;
+  /*font-family: RobotoDraft;*/
   font-size: 14px;
   min-height: 14px;
   background-color: #323232;
@@ -149,14 +153,24 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: #fff;
+  color: white;
   line-height: 22px;
   padding: 18px 24px;
-  bottom: 0;
+  bottom: 0px;
   opacity: 0;
 }
 @media (min-width: 640px) {
   .paper-snackbar {
+    /*
+    Desktop:
+      Single-line snackbar height: 48 dp tall
+      Minimum width: 288 dp
+      Maximum width: 568 dp
+      2 dp rounded corner
+      Text: Roboto Regular 14 sp
+      Action button: Roboto Medium 14 sp, all-caps text
+      Default background fill: #323232 100%
+    */
     min-width: 288px;
     max-width: 568px;
     display: inline-flex;
@@ -167,8 +181,16 @@
 }
 @media (max-width: 640px) {
   .paper-snackbar {
-    left: 0;
-    right: 0;
+    /*
+  Mobile:
+    Single-line snackbar height: 48 dp
+    Multi-line snackbar height: 80 dp
+    Text: Roboto Regular 14 sp
+    Action button: Roboto Medium 14 sp, all-caps text
+    Default background fill: #323232 100%
+  */
+    left: 0px;
+    right: 0px;
   }
 }
 .paper-snackbar .action {
@@ -178,11 +200,14 @@
   font-size: inherit;
   text-transform: uppercase;
   color: #ffeb3b;
-  margin: 0 0 0 24px;
-  padding: 0;
+  margin: 0px 0px 0px 24px;
+  padding: 0px;
   min-width: min-content;
-  outline: 0;
+  outline: 0px;
 }
+/* Everything from here down is actually just for the demo - the material buttons and card, and various other pieces of styling */
+/* Variables */
+/* Buttons */
 .paper-button {
   position: relative;
   padding: 4px 0;
@@ -190,7 +215,7 @@
   width: 160px;
   overflow: hidden;
   user-select: none;
-  color: #000;
+  color: #000000;
   text-transform: uppercase;
   border-radius: 3px;
   outline-color: #353535;
@@ -205,8 +230,9 @@
   display: block;
   width: 100%;
   height: 100%;
+  /*font-family: 'Roboto';*/
   font-size: 1em;
-  color: #000;
+  color: #000000;
   text-transform: uppercase;
 }
 .paper-button.colored,
@@ -236,16 +262,18 @@
 }
 button.paper-button {
   border: 0;
+  /*font-family: RobotoDraft, 'Helvetica Neue', Helvetica, Arial;*/
   font-size: 1em;
   line-height: 25px;
-  background-color: #fff;
+  background-color: #ffffff;
 }
 .paper-button input[type='submit'] {
   outline-color: #353535;
 }
 .paper-button.colored.raised-button input[type='submit'] {
-  color: #fff;
+  color: #ffffff;
 }
+/** Shadows **/
 .paper-shadow-animated.paper-shadow {
   transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -270,8 +298,9 @@ button.paper-button {
 .paper-shadow-top-z-4 {
   box-shadow: 0 25px 55px 0 rgba(0, 0, 0, 0.21);
 }
+/** Card **/
 .card {
-  background: #fff;
+  background: white;
   width: 300px;
   height: 300px;
   position: relative;
@@ -490,7 +519,7 @@ pre.highlight {
   font-size: 14px;
   line-height: 1.5;
   color: #555;
-  background: 0 0;
+  background: transparent;
   border: 0;
   margin: 0;
   padding: 0;
@@ -504,11 +533,11 @@ pre.highlight {
   color: #abb2bf;
 }
 .highlighter-rouge .highlight .table-responsive {
-  margin: 0;
-  border: 0;
+  margin: 0px;
+  border: 0px;
 }
 .highlighter-rouge .highlight .table {
-  margin: 0;
+  margin: 0px;
   table-layout: fixed;
 }
 .highlighter-rouge .highlight table > tbody > tr > td {
@@ -524,13 +553,14 @@ pre.highlight {
 }
 .highlighter-rouge .highlight .lineno {
   text-align: right;
-  border-radius: 0;
+  border-radius: 0px;
 }
+/* Landscape phones and down */
 @media (max-width: 480px) {
   .highlighter-rouge .highlight {
     margin-left: -15px;
     margin-right: -15px;
-    border-radius: 0;
+    border-radius: 0px;
   }
   .highlighter-rouge .highlight td.rouge-gutter {
     width: 36px;
@@ -587,12 +617,12 @@ pre.highlight {
 .search-page #search-input {
   font-family: 'Fira Code', Menlo, Monaco, Consolas, 'Courier New', monospace;
   border: none;
-  outline: 0;
+  outline: none;
   padding: 0;
   margin: 0;
   width: 100%;
   font-size: 30px;
-  font-weight: 700;
+  font-weight: bold;
   color: #404040;
 }
 @media only screen and (min-width: 768px) {
@@ -623,8 +653,12 @@ pre.highlight {
   font-size: 16px;
 }
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial,
-    'PingFang SC', 'Hiragino Sans GB', STHeiti, 'Microsoft YaHei',
+  /* learn from
+     *     TypeIsBeautiful,
+     *     [This Post](http://zhuanlan.zhihu.com/ibuick/20186806) etc.
+     */
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Arial',
+    'PingFang SC', 'Hiragino Sans GB', 'STHeiti', 'Microsoft YaHei',
     'Microsoft JhengHei', 'Source Han Sans SC', 'Noto Sans CJK SC',
     'Source Han Sans CN', 'Noto Sans SC', 'Source Han Sans TC',
     'Noto Sans CJK TC', 'WenQuanYi Micro Hei', SimSun, sans-serif;
@@ -650,14 +684,18 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial,
-    'PingFang SC', 'Hiragino Sans GB', STHeiti, 'Microsoft YaHei',
+  /* learn from
+     *     TypeIsBeautiful,
+     *     [This Post](http://zhuanlan.zhihu.com/ibuick/20186806) etc.
+     */
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Arial',
+    'PingFang SC', 'Hiragino Sans GB', 'STHeiti', 'Microsoft YaHei',
     'Microsoft JhengHei', 'Source Han Sans SC', 'Noto Sans CJK SC',
     'Source Han Sans CN', 'Noto Sans SC', 'Source Han Sans TC',
     'Noto Sans CJK TC', 'WenQuanYi Micro Hei', SimSun, sans-serif;
   line-height: 1.7;
   line-height: 1.1;
-  font-weight: 700;
+  font-weight: bold;
 }
 h4 {
   font-size: 21px;
@@ -694,15 +732,15 @@ br + small.img-hint {
   margin-top: -40px;
 }
 img.shadow {
-  box-shadow: rgba(0, 0, 0, 0.258824) 0 2px 5px 0;
+  box-shadow: rgba(0, 0, 0, 0.258824) 0px 2px 5px 0px;
 }
 select {
   -webkit-appearance: none;
   margin-top: 15px;
   color: #337ab7;
   border-color: #337ab7;
-  padding: 0 0.4em;
-  background: #fff;
+  padding: 0em 0.4em;
+  background: white;
 }
 select.sel-lang {
   min-height: 28px;
@@ -726,7 +764,7 @@ hr.small {
   max-width: 100px;
   margin: 15px auto;
   border-width: 4px;
-  border-color: #fff;
+  border-color: white;
 }
 pre,
 .table-responsive {
@@ -863,7 +901,7 @@ samp {
 }
 .post-container .pager li > a > span {
   color: #353535;
-  font-weight: 400;
+  font-weight: normal;
   letter-spacing: 0.5px;
 }
 .post-container .anchorjs-link {
@@ -871,18 +909,30 @@ samp {
   text-decoration: none !important;
 }
 @media only screen and (max-width: 767px) {
+  /**
+   * Layout
+   * Since V1.6 we use absolute positioning to prevent to expand container-fluid
+   * which would cover tags. A absolute positioning make a new layer.
+   */
   .navbar-default .navbar-collapse {
     position: absolute;
     right: 0;
     border: none;
-    background: #fff;
-    box-shadow: 0 5px 10px 2px rgba(0, 0, 0, 0.2);
-    box-shadow: rgba(0, 0, 0, 0.117647) 0 1px 6px,
-      rgba(0, 0, 0, 0.239216) 0 1px 4px;
+    background: white;
+    box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: rgba(0, 0, 0, 0.117647) 0px 1px 6px,
+      rgba(0, 0, 0, 0.239216) 0px 1px 4px;
     border-radius: 2px;
     width: 170px;
   }
-  #turingblog_navbar {
+  /**
+   * Animation
+   * Blog-Navbar using genuine Material Design Animation
+   */
+  #blog_navbar {
+    /**
+     * Sharable code and 'out' function
+     */
     opacity: 0;
     transform: scaleX(0);
     transform-origin: top right;
@@ -890,13 +940,16 @@ samp {
     -webkit-transform: scaleX(0);
     -webkit-transform-origin: top right;
     -webkit-transition: all 200ms cubic-bezier(0.47, 0, 0.4, 0.99) 0ms;
+    /**
+     *'In' Animation
+     */
   }
-  #turingblog_navbar a {
+  #blog_navbar a {
     font-size: 13px;
     line-height: 28px;
   }
-  #turingblog_navbar .navbar-collapse {
-    height: 0;
+  #blog_navbar .navbar-collapse {
+    height: 0px;
     transform: scaleY(0);
     transform-origin: top right;
     transition: transform 400ms cubic-bezier(0.32, 1, 0.23, 1) 0ms;
@@ -905,40 +958,44 @@ samp {
     -webkit-transition: -webkit-transform 400ms cubic-bezier(0.32, 1, 0.23, 1)
       0ms;
   }
-  #turingblog_navbar li {
+  #blog_navbar li {
     opacity: 0;
     transition: opacity 100ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
     -webkit-transition: opacity 100ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
   }
-  #turingblog_navbar.in {
+  #blog_navbar.in {
     transform: scaleX(1);
     -webkit-transform: scaleX(1);
     opacity: 1;
     transition: all 250ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
     -webkit-transition: all 250ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
   }
-  #turingblog_navbar.in .navbar-collapse {
+  #blog_navbar.in .navbar-collapse {
     transform: scaleY(1);
     -webkit-transform: scaleY(1);
     transition: transform 500ms cubic-bezier(0.23, 1, 0.32, 1);
     -webkit-transition: -webkit-transform 500ms cubic-bezier(0.23, 1, 0.32, 1);
   }
-  #turingblog_navbar.in li {
+  #blog_navbar.in li {
     opacity: 1;
     transition: opacity 450ms cubic-bezier(0.23, 1, 0.32, 1) 205ms;
     -webkit-transition: opacity 450ms cubic-bezier(0.23, 1, 0.32, 1) 205ms;
   }
 }
 .navbar-custom {
-  background: 0 0;
+  background: none;
   border: none;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 3;
-  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial,
-    'PingFang SC', 'Hiragino Sans GB', STHeiti, 'Microsoft YaHei',
+  /* learn from
+     *     TypeIsBeautiful,
+     *     [This Post](http://zhuanlan.zhihu.com/ibuick/20186806) etc.
+     */
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Arial',
+    'PingFang SC', 'Hiragino Sans GB', 'STHeiti', 'Microsoft YaHei',
     'Microsoft JhengHei', 'Source Han Sans SC', 'Noto Sans CJK SC',
     'Source Han Sans CN', 'Noto Sans SC', 'Source Han Sans TC',
     'Noto Sans CJK TC', 'WenQuanYi Micro Hei', SimSun, sans-serif;
@@ -946,7 +1003,7 @@ samp {
 }
 .navbar-custom .navbar-brand {
   font-weight: 800;
-  color: #fff;
+  color: white;
   height: 56px;
   line-height: 25px;
 }
@@ -955,7 +1012,7 @@ samp {
 }
 .navbar-custom .nav li a {
   text-transform: uppercase;
-  font-size: 15px;
+  font-size: 12px;
   line-height: 20px;
   font-weight: 800;
   letter-spacing: 1px;
@@ -965,14 +1022,14 @@ samp {
 }
 @media only screen and (min-width: 768px) {
   .navbar-custom {
-    background: 0 0;
+    background: transparent;
     border-bottom: 1px solid transparent;
   }
   .navbar-custom body {
     font-size: 20px;
   }
   .navbar-custom .navbar-brand {
-    color: #fff;
+    color: white;
     padding: 20px;
     line-height: 20px;
   }
@@ -981,7 +1038,7 @@ samp {
     color: rgba(255, 255, 255, 0.8);
   }
   .navbar-custom .nav li a {
-    color: #fff;
+    color: white;
     padding: 20px;
   }
   .navbar-custom .nav li a:hover,
@@ -989,7 +1046,7 @@ samp {
     color: rgba(255, 255, 255, 0.8);
   }
   .navbar-custom .nav li a:active {
-    background: 0 0;
+    background: none;
   }
 }
 .navbar-custom.invert .navbar-toggle:active {
@@ -1017,6 +1074,7 @@ samp {
     -webkit-transition: background-color 0.3s;
     -moz-transition: background-color 0.3s;
     transition: background-color 0.3s;
+    /* Force Hardware Acceleration in WebKit */
     -webkit-transform: translate3d(0, 0, 0);
     -moz-transform: translate3d(0, 0, 0);
     -ms-transform: translate3d(0, 0, 0);
@@ -1026,6 +1084,7 @@ samp {
     backface-visibility: hidden;
   }
   .navbar-custom.is-fixed {
+    /* when the user scrolls down, we hide the header right above the viewport */
     position: fixed;
     top: -61px;
     background-color: rgba(255, 255, 255, 0.9);
@@ -1049,6 +1108,7 @@ samp {
     color: #0085a1;
   }
   .navbar-custom.is-visible {
+    /* if the user changes the scrolling direction, we show the header */
     -webkit-transform: translate3d(0, 100%, 0);
     -moz-transform: translate3d(0, 100%, 0);
     -ms-transform: translate3d(0, 100%, 0);
@@ -1064,10 +1124,11 @@ samp {
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
-  margin-bottom: 0;
+  margin-bottom: 0px;
+  /* 0 on mobile, modify */
 }
 .intro-header.style-text {
-  background: 0 0;
+  background: none;
 }
 .intro-header.style-text .site-heading,
 .intro-header.style-text .post-heading,
@@ -1094,13 +1155,14 @@ samp {
 @media only screen and (min-width: 768px) {
   .intro-header {
     margin-bottom: 20px;
+    /* response on desktop */
   }
 }
 .intro-header .site-heading,
 .intro-header .post-heading,
 .intro-header .page-heading {
   padding: 85px 0 55px;
-  color: #fff;
+  color: white;
 }
 @media only screen and (min-width: 768px) {
   .intro-header .site-heading,
@@ -1128,8 +1190,12 @@ samp {
 }
 .intro-header .site-heading .subheading,
 .intro-header .page-heading .subheading {
-  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial,
-    'PingFang SC', 'Hiragino Sans GB', STHeiti, 'Microsoft YaHei',
+  /* learn from
+     *     TypeIsBeautiful,
+     *     [This Post](http://zhuanlan.zhihu.com/ibuick/20186806) etc.
+     */
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Arial',
+    'PingFang SC', 'Hiragino Sans GB', 'STHeiti', 'Microsoft YaHei',
     'Microsoft JhengHei', 'Source Han Sans SC', 'Noto Sans CJK SC',
     'Source Han Sans CN', 'Noto Sans SC', 'Source Han Sans TC',
     'Noto Sans CJK TC', 'WenQuanYi Micro Hei', SimSun, sans-serif;
@@ -1156,26 +1222,30 @@ samp {
   display: block;
 }
 .intro-header .post-heading .subheading {
-  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial,
-    'PingFang SC', 'Hiragino Sans GB', STHeiti, 'Microsoft YaHei',
+  /* learn from
+     *     TypeIsBeautiful,
+     *     [This Post](http://zhuanlan.zhihu.com/ibuick/20186806) etc.
+     */
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Arial',
+    'PingFang SC', 'Hiragino Sans GB', 'STHeiti', 'Microsoft YaHei',
     'Microsoft JhengHei', 'Source Han Sans SC', 'Noto Sans CJK SC',
     'Source Han Sans CN', 'Noto Sans SC', 'Source Han Sans TC',
     'Noto Sans CJK TC', 'WenQuanYi Micro Hei', SimSun, sans-serif;
   line-height: 1.7;
   font-size: 17px;
   line-height: 1.4;
-  font-weight: 400;
+  font-weight: normal;
   margin: 10px 0 30px;
   margin-top: -5px;
 }
 .intro-header .post-heading .meta {
-  font-family: Lora, 'Times New Roman', serif;
+  font-family: 'Lora', 'Times New Roman', serif;
   font-style: italic;
   font-weight: 300;
   font-size: 16px;
 }
 .intro-header .post-heading .meta a {
-  color: #fff;
+  color: white;
 }
 @media only screen and (min-width: 768px) {
   .intro-header .post-heading h1 {
@@ -1192,13 +1262,13 @@ samp {
   position: absolute;
   bottom: 6px;
   right: 9px;
-  color: #fff;
+  color: white;
   opacity: 0.3;
   font-size: 10px;
   z-index: 1;
 }
 .intro-header .header-img-credit a {
-  color: #fff;
+  color: white;
 }
 @media only screen and (min-width: 768px) {
   .intro-header .header-img-credit {
@@ -1229,7 +1299,7 @@ samp {
   margin-bottom: 10px;
 }
 .post-preview > .post-meta {
-  font-family: Lora, 'Times New Roman', serif;
+  font-family: 'Lora', 'Times New Roman', serif;
   color: #353535;
   font-size: 16px;
   font-style: italic;
@@ -1306,8 +1376,12 @@ footer .copyright a:focus {
   color: #0085a1;
 }
 .btn {
-  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial,
-    'PingFang SC', 'Hiragino Sans GB', STHeiti, 'Microsoft YaHei',
+  /* learn from
+     *     TypeIsBeautiful,
+     *     [This Post](http://zhuanlan.zhihu.com/ibuick/20186806) etc.
+     */
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Arial',
+    'PingFang SC', 'Hiragino Sans GB', 'STHeiti', 'Microsoft YaHei',
     'Microsoft JhengHei', 'Source Han Sans SC', 'Noto Sans CJK SC',
     'Source Han Sans CN', 'Noto Sans SC', 'Source Han Sans TC',
     'Noto Sans CJK TC', 'WenQuanYi Micro Hei', SimSun, sans-serif;
@@ -1327,16 +1401,20 @@ footer .copyright a:focus {
 .btn-default:focus {
   background-color: #0085a1;
   border: 1px solid #0085a1;
-  color: #fff;
+  color: white;
 }
 .pager {
   margin: 20px 0 0 !important;
-  padding: 0 !important;
+  padding: 0px !important;
 }
 .pager li > a,
 .pager li > span {
-  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial,
-    'PingFang SC', 'Hiragino Sans GB', STHeiti, 'Microsoft YaHei',
+  /* learn from
+     *     TypeIsBeautiful,
+     *     [This Post](http://zhuanlan.zhihu.com/ibuick/20186806) etc.
+     */
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Arial',
+    'PingFang SC', 'Hiragino Sans GB', 'STHeiti', 'Microsoft YaHei',
     'Microsoft JhengHei', 'Source Han Sans SC', 'Noto Sans CJK SC',
     'Source Han Sans CN', 'Noto Sans SC', 'Source Han Sans TC',
     'Noto Sans CJK TC', 'WenQuanYi Micro Hei', SimSun, sans-serif;
@@ -1346,7 +1424,7 @@ footer .copyright a:focus {
   font-weight: 800;
   letter-spacing: 1px;
   padding: 10px;
-  background-color: #fff;
+  background-color: white;
   border-radius: 0;
 }
 @media only screen and (min-width: 768px) {
@@ -1361,13 +1439,13 @@ footer .copyright a:focus {
 }
 .pager li > a:hover,
 .pager li > a:focus {
-  color: #fff;
+  color: white;
   background-color: #0085a1;
   border: 1px solid #0085a1;
 }
 .pager li > a:hover > span,
 .pager li > a:focus > span {
-  color: #fff;
+  color: white;
 }
 .pager .disabled > a,
 .pager .disabled > a:hover,
@@ -1378,23 +1456,24 @@ footer .copyright a:focus {
   cursor: not-allowed;
 }
 ::-moz-selection {
-  color: #fff;
+  color: white;
   text-shadow: none;
   background: #0085a1;
 }
 ::selection {
-  color: #fff;
+  color: white;
   text-shadow: none;
   background: #0085a1;
 }
 img::selection {
-  color: #fff;
-  background: 0 0;
+  color: white;
+  background: transparent;
 }
 img::-moz-selection {
-  color: #fff;
-  background: 0 0;
+  color: white;
+  background: transparent;
 }
+/* add tags support */
 .d-none {
   display: none !important;
 }
@@ -1411,7 +1490,7 @@ img::-moz-selection {
   border: 1px solid rgba(255, 255, 255, 0.8);
   border-radius: 999em;
   padding: 0 10px 0 10px;
-  color: #fff;
+  color: #ffffff;
   line-height: 24px;
   font-size: 12px;
   text-decoration: none;
@@ -1428,8 +1507,8 @@ img::-moz-selection {
 .tags .tag:hover,
 .tags a:active,
 .tags .tag:active {
-  color: #fff;
-  border-color: #fff;
+  color: white;
+  border-color: white;
   background-color: rgba(255, 255, 255, 0.4);
   text-decoration: none;
 }
@@ -1502,7 +1581,7 @@ img::-moz-selection {
   }
 }
 .t:first-child {
-  margin-top: 0;
+  margin-top: 0px;
 }
 .listing-seperator {
   color: #0085a1;
@@ -1522,8 +1601,12 @@ img::-moz-selection {
 }
 .mini-post-list .tag-text {
   font-weight: 200;
-  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial,
-    'PingFang SC', 'Hiragino Sans GB', STHeiti, 'Microsoft YaHei',
+  /* learn from
+     *     TypeIsBeautiful,
+     *     [This Post](http://zhuanlan.zhihu.com/ibuick/20186806) etc.
+     */
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Arial',
+    'PingFang SC', 'Hiragino Sans GB', 'STHeiti', 'Microsoft YaHei',
     'Microsoft JhengHei', 'Source Han Sans SC', 'Noto Sans CJK SC',
     'Source Han Sans CN', 'Noto Sans SC', 'Source Han Sans TC',
     'Noto Sans CJK TC', 'WenQuanYi Micro Hei', SimSun, sans-serif;
@@ -1543,8 +1626,8 @@ img::-moz-selection {
 .mini-post-list .post-preview > .post-meta {
   position: absolute;
   right: 5px;
-  bottom: 0;
-  margin: 0;
+  bottom: 0px;
+  margin: 0px;
   font-size: 12px;
   line-height: 12px;
 }
@@ -1563,12 +1646,15 @@ img::-moz-selection {
     font-size: 18px;
   }
 }
+/* Tags support End*/
+/* make all img responsible in post-container */
 .post-container img {
   display: block;
   max-width: 100%;
   height: auto;
   margin: 1.5em auto 1.6em auto;
 }
+/* Optimize UserExperience */
 .navbar-default .navbar-toggle:focus,
 .navbar-default .navbar-toggle:hover {
   background-color: inherit;
@@ -1576,6 +1662,7 @@ img::-moz-selection {
 .navbar-default .navbar-toggle:active {
   background-color: rgba(255, 255, 255, 0.25);
 }
+/* customize Style for navBar button */
 .navbar-default .navbar-toggle {
   border-color: transparent;
   padding: 19px 16px;
@@ -1586,8 +1673,8 @@ img::-moz-selection {
 }
 .navbar-default .navbar-toggle .icon-bar {
   width: 18px;
-  border-radius: 0;
-  background-color: #fff;
+  border-radius: 0px;
+  background-color: white;
 }
 .navbar-default .navbar-toggle .icon-bar + .icon-bar {
   margin-top: 3px;
