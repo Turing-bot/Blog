@@ -1,7 +1,7 @@
 /* ===========================================================
  * sw.js
  * ===========================================================
- * Copyright 2016 @z0p
+ * Copyright 2016 @openwx
  * Licensed under Apache 2.0
  * service worker scripting
  * ========================================================== */
@@ -27,7 +27,7 @@ const PRECACHE_LIST = [
 ]
 const HOSTNAME_WHITELIST = [
   self.location.hostname,
-  "z0p.github.io",
+  "openwx.github.io",
   "cdnjs.cloudflare.com"
 ]
 const DEPRECATED_CACHES = ['precache-v1', 'runtime', 'main-precache-v1', 'main-runtime']

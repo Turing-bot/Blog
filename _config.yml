@@ -5,13 +5,13 @@ header-img: img/head-bg/home.jpg
 email: 6199599@gmail.com
 description: 'web apps, programming talk, and random thoughts'
 keyword: '张文庆的博客'
-url: 'https://z0p.github.io/' # your host, for absolute URL
+url: 'https://openwx.github.io/' # your host, for absolute URL
 baseurl: '' # for example, '/blog' if your blog hosted on 'host/blog'
 
 # Publish posts or collection documents with a future date.
 future: true
 
-github_username: z0p
+github_username: openwx
 telegram_username: github1s
 
 # Build settings
@@ -45,12 +45,12 @@ kramdown:
       start_line: 1
 
 # giscus settings
-giscus_username: z0p
+giscus_username: openwx
 
 # Sidebar settings
 sidebar: true # whether or not using Sidebar.
 sidebar-about-description: '有意义的活着。'
-sidebar-avatar: https://github.com/z0p.png # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-avatar: https://github.com/openwx.png # use absolute URL, seeing it's used in both `/` and `/about/`
 
 # Featured Tags
 featured-tags: true # whether or not using Feature-Tags
