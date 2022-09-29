@@ -4,6 +4,7 @@ description: ''
 ---
 
 {% for post in paginator.posts %}
+{% if post.onTop == true %}
 <div class="post-preview">
   <a href="{{ post.url | prepend: site.baseurl }}">
     <h2 class="post-title">{{ post.title }}</h2>
@@ -18,9 +19,16 @@ description: ''
   <p class="post-meta">
     Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{%
     endif %} on {{ post.date | date: "%B %-d, %Y" }}
+    <div class="ontop-title-group">
+      <span class="ontop-pushpin glyphicon glyphicon-pushpin"></span>
+      <h2 class="ontop post-title" style="display: inline;">
+          {{ post.title }}
+      </h2>
+  </div>
   </p>
 </div>
 <hr />
+{% endif %}
 {% endfor %}
 
 <!-- Pager -->
