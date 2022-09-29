@@ -635,11 +635,8 @@ body {
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  display: none;
 }
-.fontawesome-i2svg-active body {
-  display: initial;
-}
+
 p {
   margin: 30px 0;
 }
