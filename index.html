@@ -3,8 +3,31 @@ layout: page
 description: ''
 ---
 
-{% for post in paginator.posts %}
-{% if post.onTop == true %}
+<!-- 遍历置顶文章 -->
+{% for post in paginator.posts %} {% if post.onTop == true %}
+<div class="post-preview">
+  <a href="{{ post.url | prepend: site.baseurl }}">
+    <h2 class="post-title">
+      <i class="fa-solid fa-thumbtack"></i>{{ post.title }}
+    </h2>
+    {% if post.subtitle %}
+    <h3 class="post-subtitle">{{ post.subtitle }}</h3>
+    {% endif %}
+    <div class="post-content-preview">
+      {% if post.lang == 'en' %} {{ post.content | strip_html | truncate:300 }}
+      {% else %} {{ post.content | strip_html | truncate:200 }} {% endif %}
+    </div>
+  </a>
+  <p class="post-meta">
+    Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{%
+    endif %} on {{ post.date | date: "%B %-d, %Y" }}
+  </p>
+</div>
+<hr />
+{% endif %} {% endfor %}
+
+<!-- 遍历不置顶文章 -->
+{% for post in paginator.posts %} {% if post.onTop !== true %}
 <div class="post-preview">
   <a href="{{ post.url | prepend: site.baseurl }}">
     <h2 class="post-title">{{ post.title }}</h2>
@@ -19,17 +42,10 @@ description: ''
   <p class="post-meta">
     Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{%
     endif %} on {{ post.date | date: "%B %-d, %Y" }}
-    <div class="ontop-title-group">
-      <span class="ontop-pushpin glyphicon glyphicon-pushpin"></span>
-      <h2 class="ontop post-title" style="display: inline;">
-          {{ post.title }}
-      </h2>
-  </div>
   </p>
 </div>
 <hr />
-{% endif %}
-{% endfor %}
+{% endif %} {% endfor %}
 
 <!-- Pager -->
 {% if paginator.total_pages > 1 %}
