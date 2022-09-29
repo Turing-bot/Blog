@@ -636,7 +636,12 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+.wait-for-icons {
+  display: none;
+}
+.fontawesome-i2svg-active .wait-for-icons {
+  display: initial;
+}
 p {
   margin: 30px 0;
 }
