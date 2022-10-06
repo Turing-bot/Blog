@@ -27,7 +27,7 @@ description: ''
 {% endif %} {% endfor %}
 
 <!-- 遍历不置顶文章 -->
-{% for post in paginator.posts %} {% if not post.onTop %}
+{% for post in paginator.posts %} {% if post.onTop != true %}
 <div class="post-preview">
   <a href="{{ post.url | prepend: site.baseurl }}">
     <h2 class="post-title">{{ post.title }}</h2>
