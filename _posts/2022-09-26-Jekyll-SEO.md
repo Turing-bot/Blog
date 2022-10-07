@@ -1,10 +1,10 @@
 ---
 layout: post
-title: 'Add Google SEO to Your Jekyll Blog'
-subtitle: '让Google搜索到自己的博客'
+title: '为 Jekyll 博客添加 Google SEO 功能'
+subtitle: 'Add Google SEO to Your Jekyll Blog'
 header-style: text
 tags:
-  - SEO
+  - Google SEO
 ---
 
 一开始以为自己创建了博客，就能通过 google 或者百度搜索得到，原来是自己想得太天真了，能够被搜索引擎搜索得到**是需要自己的链接被搜索引擎所收录**。当然，这里有两种方法能够被搜索引擎添加自己网站的索引。一个是自己努力提高自己的网站知名度，让搜索引擎主动去添加索引。另外一种就是自己把自己的链接添加到搜索引擎的索引当中，谁叫我们不出名了，所以也就只能自己主动向搜索引擎去添加自己的链接了。注意，这里只针对 google，因为百度暂时无法有权利对某些网站进行爬取。

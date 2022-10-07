@@ -5,7 +5,7 @@ subtitle: 'Vue 代码风格'
 author: 'openwx'
 header-style: text
 catalog: true
-onTop: true
+onTop: false
 tags:
   - Vue
 ---
