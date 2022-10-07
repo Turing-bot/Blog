@@ -2,10 +2,13 @@
 layout: default
 title: 关于
 header-img: 'img/head-bg/other.png'
-description: 'about'
+description: '「About」'
 ---
 
 <!-- Page Header -->
 {% include intro-header.html type='page' %}
 
-<div class="post-container">{% include about/about.md %}</div>
+<div class="post-container">
+  {% capture about_zh %}{% include about/about.md %}{% endcapture %} {{ about_zh
+  | markdownify }}
+</div>

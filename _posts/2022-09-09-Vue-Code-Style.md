@@ -1,7 +1,7 @@
 ---
 layout: post
-title: 'Vue code style'
-subtitle: 'Vue 代码风格'
+title: 'Vue 代码风格'
+subtitle: 'Vue code style'
 author: 'openwx'
 header-style: text
 catalog: true
