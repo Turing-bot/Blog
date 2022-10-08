@@ -4,6 +4,7 @@ title: '为 Jekyll 博客添加 Google SEO 功能'
 subtitle: 'Add Google SEO to Your Jekyll Blog'
 author: 'openwx'
 header-style: text
+onTop: true
 tags:
   - Google SEO
 ---
