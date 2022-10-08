@@ -15,7 +15,13 @@ description: '「About」'
     <!-- PostList Container -->
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       {% capture about %}{% include about/about.md %}{% endcapture %} {{ about |
-      markdownify }} {% if site.giscus_username %}
+      markdownify }}
+
+      <br />
+      <br />
+      <br />
+
+      {% if site.giscus_username %}
       <script
         src="https://giscus.app/client.js"
         data-repo="openwx/openwx.github.io"
