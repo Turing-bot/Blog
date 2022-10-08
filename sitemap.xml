@@ -9,67 +9,52 @@
 
 <url>
   <loc>https://openwx.github.io/</loc>
-  <lastmod>2022-09-27T03:44:15+00:00</lastmod>
+  <lastmod>2022-10-07T12:55:08+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://openwx.github.io/archive/</loc>
-  <lastmod>2022-09-27T03:44:15+00:00</lastmod>
+  <lastmod>2022-10-07T12:55:08+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://openwx.github.io/other/</loc>
-  <lastmod>2022-09-27T03:44:15+00:00</lastmod>
+  <lastmod>2022-10-07T12:55:08+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://openwx.github.io/2022/09/26/Jekyll-SEO/</loc>
-  <lastmod>2022-09-27T03:44:15+00:00</lastmod>
+  <lastmod>2022-10-07T12:55:08+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://openwx.github.io/2022/09/22/Mathjax-v3/</loc>
-  <lastmod>2022-09-27T03:44:15+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://openwx.github.io/2022/09/09/Vue-Code-Style/</loc>
-  <lastmod>2022-09-27T03:44:15+00:00</lastmod>
+  <lastmod>2022-10-07T12:55:08+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://openwx.github.io/2022/09/07/GItalk/</loc>
-  <lastmod>2022-09-27T03:44:15+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://openwx.github.io/archive/?tag=Jekyll</loc>
-  <lastmod>2022-09-27T03:44:15+00:00</lastmod>
+  <lastmod>2022-10-07T12:55:08+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://openwx.github.io/archive/?tag=Gitalk</loc>
-  <lastmod>2022-09-27T03:44:15+00:00</lastmod>
+  <lastmod>2022-10-07T12:55:08+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://openwx.github.io/archive/?tag=Google+SEO</loc>
+  <lastmod>2022-10-07T12:55:08+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://openwx.github.io/archive/?tag=LaTex</loc>
-  <lastmod>2022-09-27T03:44:15+00:00</lastmod>
+  <lastmod>2022-10-07T12:55:08+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://openwx.github.io/archive/?tag=MathJax</loc>
-  <lastmod>2022-09-27T03:44:15+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://openwx.github.io/archive/?tag=SEO</loc>
-  <lastmod>2022-09-27T03:44:15+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://openwx.github.io/archive/?tag=Vue</loc>
-  <lastmod>2022-09-27T03:44:15+00:00</lastmod>
+  <lastmod>2022-10-07T12:55:08+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 
