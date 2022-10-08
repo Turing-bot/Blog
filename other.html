@@ -13,9 +13,7 @@ description: '「About」'
   <div class="row">
     <!-- USE SIDEBAR -->
     <!-- PostList Container -->
-    <div
-      class="col-lg-8 col-lg-offset-1 col-md-8 col-md-offset-1 col-sm-12 col-xs-12 postlist-container"
-    >
+    <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 postlist-container">
       {% capture about %}{% include about/about.md %}{% endcapture %} {{ about |
       markdownify }} {% if site.giscus_username %}
       <script
@@ -35,17 +33,6 @@ description: '「About」'
         async
       ></script>
       {% endif %}
-    </div>
-
-    <!-- Sidebar Container -->
-    <div
-      class="col-lg-3 col-lg-offset-0 col-md-3 col-md-offset-0 col-sm-12 col-xs-12 sidebar-container"
-    >
-      <!-- Featured Tags -->
-      {% include featured-tags.html %}
-
-      <!-- Short About -->
-      {% include short-about.html %}
     </div>
   </div>
 </div>
