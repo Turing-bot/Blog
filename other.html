@@ -16,8 +16,8 @@ description: '「About」'
     <div
       class="col-lg-8 col-lg-offset-1 col-md-8 col-md-offset-1 col-sm-12 col-xs-12 postlist-container"
     >
-      {% capture about %}{% include about/2022-09-22-Mathjax-v3.md %}{%
-      endcapture %} {{ about | markdownify }} {% if site.giscus_username %}
+      {% capture about %}{% include about/about.md %}{% endcapture %} {{ about |
+      markdownify }} {% if site.giscus_username %}
       <script
         src="https://giscus.app/client.js"
         data-repo="openwx/openwx.github.io"
