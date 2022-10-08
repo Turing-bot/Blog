@@ -13,9 +13,7 @@ description: '「About」'
   <div class="row">
     <!-- USE SIDEBAR -->
     <!-- PostList Container -->
-    <div
-      class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 post-container"
-    >
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       {% capture about %}{% include about/about.md %}{% endcapture %} {{ about |
       markdownify }} {% if site.giscus_username %}
       <script
