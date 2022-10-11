@@ -17,15 +17,15 @@ description: '「About」'
       {% capture about %}{% include about/about.md %}{% endcapture %} {{ about |
       markdownify }}
 
-      <iframe
-        width="560"
-        height="315"
-        src="https://www.youtube-nocookie.com/embed/5qap5aO4i9A"
-        title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-      ></iframe>
+      <div class="youtube-wrapper">
+        <iframe
+          src="https://www.youtube.com/embed/X2DUpDxFJyg"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
 
       <br />
       <br />
