@@ -1,5 +1,3 @@
-## Dipper:“Ready to head into the unknown?”
+## Dipper: " Ready to head into the unknown? "
 
-## Mabel:"Nope.
-
-## Let's do it."
+## Mabel: " Nope. Let's do it. "
