@@ -1,8 +1,8 @@
 # Site settings
 title: 'Blog'
-SEOTitle: 张文庆的博客 | web apps, programming talk, and random thoughts
+SEOTitle: Zhang' Blog | 张文庆的博客
 header-img: img/head-bg/home.png
-description: '这里是张文庆的博客 | Stay Hungry. Stay Foolish.'
+description: '这里是张文庆的博客 | web apps, programming talk, and random thoughts.'
 keyword: '张文庆的博客'
 url: 'https://openwx.github.io/' # your host, for absolute URL
 baseurl: '' # for example, '/blog' if your blog hosted on 'host/blog'
